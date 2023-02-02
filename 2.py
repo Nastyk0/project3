@@ -35,9 +35,10 @@ class Example(QWidget):
         ast = b['lowerCorner'].split()
         ast1 = b['upperCorner'].split()
         spn1 = abs(float(ast[0]) - float(ast1[0])) / 2
+        spn2 = abs(float(ast[1]) - float(ast1[1])) / 2
         map_params = {
             "ll": ",".join([toponym_longitude, toponym_lattitude]),
-            "spn": ",".join([str(spn1), str(spn1)]),
+            "spn": ",".join([str(spn1), str(spn2)]),
             "l": "map"
         }
         map_api_server = "http://static-maps.yandex.ru/1.x/"
